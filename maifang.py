@@ -22,14 +22,15 @@ def get_price(city_price):
 
 def save_result(city_result, area_result, year_result, income_result):
     file = open("aim.csv", "w")
-    file.write("城市" + "," + city_result)
-    file.write(",")
-    file.write("面积" + "," + str(area_result))
-    file.write(",")
-    file.write("年限" + "," + str(year_result))
-    file.write(",")
-    file.write("月收入"+","+ str(income_result))
+    file.write("城市" + "," + city_result + "\n")
+    # + 是连接单元格内容
+    # , 是把不同内容分开写入不同的单元格内
+    # \n 是换行
+    file.write("面积" + "," + str(area_result) + "\n")
+    file.write("年限" + "," + str(year_result) + "\n")
+    file.write("月收入"+"," + str(income_result))
     file.close()
+    # 文件打开之后一定要关闭
 
 
 city = str(input("请输入你想定居的城市："))
